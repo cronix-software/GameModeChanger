@@ -1,0 +1,31 @@
+name: GameModeChanger
+version: 0.4.0
+description: This plugin lets you change yours and others gamemode
+author: Kantenkugel
+
+main: me.kantenkugel.serveress.gamemodechanger.GameModeChanger
+
+commands:
+    gm:
+        description: Changes yours or others Gamemode
+        usage: /<command> [player]
+    getgm:
+        description: Outputs the Gamemode of a Player
+        usage: /<command> player
+
+permissions:
+    gamemodechanger.*:
+        description: Gives access to all of GameModeChangers commands
+        children:
+            gamemodechanger.use: true
+            gamemodechanger.other: true
+            gamemodechanger.get: true
+    gamemodechanger.use:
+        description: lets you use the plugin
+        default: op
+    gamemodechanger.other:
+        description: lets you change the gamemode of other players
+        default: op
+    gamemodechanger.get:
+        description: lets you output the gamemode of a player
+        default: op
